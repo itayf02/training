@@ -1,15 +1,6 @@
-import copy
-a = [[1,2,3]]
-b = copy.copy(a)
-print(id(a))
-print(id(b))
+def gen():
+    yield from range(5)
 
-c = A()
-d = copy.copy(c)
-
-print(id(c))
-print(id(d))
-
-c.x = 20
-print(c.x)
-print(d.x)
+g = gen()
+print(next(g))
+print(next(g))
