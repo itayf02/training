@@ -1,6 +1,6 @@
+import pandas as pd
 import numpy as np
 
-Z = np.random.randint(0, 10, size=(6,6))
-# print(Z)
-# print(Z[1:-1, 1:-1])
-print(np.indices((4,4,4)).shape)
+x = np.arange(1,11).reshape(2,5)
+x[0:2,2:4] = 99
+print(x)
