@@ -2,10 +2,10 @@ import pandas as pd
 import time
 import random
 
-slow_factor = 0.1
+slow_factor = 0.00001
 
 def do_slow_stuff(output_func):
-    l = 5.0 / slow_factor
+    l = 5.0
     for i in range(int(l)):
         output_func(i / l)
         time.sleep(slow_factor)
@@ -14,7 +14,7 @@ def do_slow_stuff(output_func):
 def slow_calc():
     slow_factor = 0.1
     start_t = time.time()
-    end_t = start_t + (random.random() / slow_factor)
+    end_t = start_t + (random.random())
     while time.time() < end_t:
         continue
 
