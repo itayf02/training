@@ -2,19 +2,20 @@ import pandas as pd
 import time
 import random
 
-slow_factor = 0.1
+slow_factor = 0.00001
 
 def do_slow_stuff(output_func):
-    l = 5.0 / slow_factor
-    for i in xrange(int(l)):
+    l = 5.0
+    for i in range(int(l)):
         output_func(i / l)
         time.sleep(slow_factor)
     output_func(1.0)
 
 def slow_calc():
-    start_t = time.clock()
-    end_t = start_t + (random.random() / slow_factor)
-    while time.clock() < end_t:
+    slow_factor = 0.1
+    start_t = time.time()
+    end_t = start_t + (random.random())
+    while time.time() < end_t:
         continue
 
 class SlowWrapper():

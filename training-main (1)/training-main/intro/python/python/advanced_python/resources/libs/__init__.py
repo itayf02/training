@@ -1,1 +1,1 @@
-import slowpandas
+import python.advanced_python.slowpandas as slowpandas
